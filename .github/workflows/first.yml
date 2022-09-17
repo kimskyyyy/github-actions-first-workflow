@@ -5,3 +5,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo 'Hello, GitHub Actions!'
+
+# pwd-ls(작업 식별자) 작업 추가, 현재 작업 디렉토리 경로 출력 후 경로 내 파일 나열
+pwd-ls:
+    name: PWD & LS
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print working directory
+        run: pwd
+      - name: List files
+        run: ls -al
